@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { GridContainer } from "../../wrappers/GridContainer.style";
 import { createNoteSchema } from "./CreateNoteInputHandler";
 import {
   ErrorCard,
@@ -27,7 +26,7 @@ const CreateNotePage = () => {
 
   const onCreateHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    createNoteFormHandler.handleSubmit;
+    createNoteFormHandler.handleSubmit();
 
     await axios({
       method: "post",
@@ -75,6 +74,7 @@ const CreateNotePage = () => {
   };
 
   return (
+
     <Wrapper>
       <AddNoteCard>
         <AddForm onSubmit={onCreateHandler}>
