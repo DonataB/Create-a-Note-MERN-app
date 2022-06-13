@@ -13,6 +13,7 @@ import GlobalStyles from "./globalStyles/GlobalStyles";
 import NavigationBar from "./components/views/Navbar/Navbar";
 import HomePage from "./components/views/HomePage/HomePage";
 import NotesPage from "./components/views/Notes/NotesPage";
+import CreateNotePage from "./components/views/CreateNote/CreateNotePage";
 
 function App() {
 	return (
@@ -23,7 +24,7 @@ function App() {
 					<Route path='/' element={<PagesWithNavigationBar />}>
 						<Route path='/' element={<HomePage />} />
 						<Route path="/all-notes" element={<NotesPage />} />
-						{/* <Route path="/create" element={<CreateNotes />} /> */}
+						<Route path="/create" element={<CreateNotePage />} />
 					</Route>
 				</Routes>
 				<ToastContainer />
