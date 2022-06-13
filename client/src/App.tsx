@@ -10,15 +10,18 @@ import {
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import GlobalStyles from './globalStyles/GlobalStyles';
+import HomePage from './components/views/HomePage/HomePage';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-
+      <Router>
+        <Routes>
+        <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Router>
+ 
     </ThemeProvider>
   );
 }
