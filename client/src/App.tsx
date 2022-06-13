@@ -12,6 +12,7 @@ import { ToastContainer } from "react-toastify";
 import GlobalStyles from "./globalStyles/GlobalStyles";
 import NavigationBar from "./components/views/Navbar/Navbar";
 import HomePage from "./components/views/HomePage/HomePage";
+import NotesPage from "./components/views/Notes/NotesPage";
 
 function App() {
 	return (
@@ -21,7 +22,7 @@ function App() {
 				<Routes>
 					<Route path='/' element={<PagesWithNavigationBar />}>
 						<Route path='/' element={<HomePage />} />
-						{/* <Route path="/all-notes" element={<NotesPage />} /> */}
+						<Route path="/all-notes" element={<NotesPage />} />
 						{/* <Route path="/create" element={<CreateNotes />} /> */}
 					</Route>
 				</Routes>

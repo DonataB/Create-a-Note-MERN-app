@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 import LandingPageBackground from "../../../assets/LandingPagePhoto.jpg";
 
 export const HomePageWrapper = styled.div`
