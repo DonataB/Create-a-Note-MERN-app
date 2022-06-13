@@ -1,9 +1,9 @@
 export const theme = {
   colors: {
     common: {
+      text: "#FFF",
       textColor: "#242F9B",
       // textColor: "#000",
-      // textColorSecondary: "#FFF",
       textColorSecondary: "#646FD4",
       textInactive: "#A59E9E",
       secondaryTextInactive: "#8B8B8B",
