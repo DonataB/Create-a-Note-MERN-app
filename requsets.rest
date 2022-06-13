@@ -1,0 +1,14 @@
+#create note
+POST http://localhost:3000/notes/create
+Content-Type: application/json
+
+{
+    "title": "nowa baza",
+    "content": "działa!"
+}
+
+
+###
+
+# get all notes
+GET http://localhost:3000/notes
