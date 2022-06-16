@@ -14,9 +14,6 @@ const noteSchema = new mongoose.Schema(
       max: 5000,
     },
   }
-  // {
-  // 	versionKey: false,
-  // }
 );
 
 const Note = mongoose.model("Note", noteSchema);

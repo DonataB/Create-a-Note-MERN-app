@@ -1,8 +1,8 @@
-import createNote from "../repositories/command.js";
-import { findNoteById } from "../repositories/queries.js";
+import { createNote } from "../repositories/command.js";
+import { getNote } from "../repositories/queries.js";
 
 const addNewNote = async (data) => {
-  const existingNote = await findNoteById(data.id);
+  const existingNote = await getNote(data.id);
   if (existingNote) {
     throw new Error("Note already exist");
   }

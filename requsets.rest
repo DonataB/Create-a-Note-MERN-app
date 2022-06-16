@@ -3,7 +3,7 @@ POST http://localhost:3000/notes/create
 Content-Type: application/json
 
 {
-    "title": "nowa baza",
+    "title": "noo",
     "content": "działa!"
 }
 
