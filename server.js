@@ -21,15 +21,15 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 const corsOptions = {
   origin: "*",
   "Access-Control-Allow-Origin": "*",
-  exposedHeaders: "token",
 };
 app.use(cors(corsOptions));
+app.use("/notes", noteRoute);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 // app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "../../client/build", "index.html"));
+//   res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
 // });
 
 app.listen(process.env.PORT || 3000, () => {
@@ -44,4 +44,3 @@ mongoose
   .then(() => console.log("Connected into MongoDB.."))
   .catch((err) => console.error(err));
 
-app.use("/notes", noteRoute);

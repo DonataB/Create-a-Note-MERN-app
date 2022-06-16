@@ -6,7 +6,12 @@
 	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon server.js",
+		"start": "node server.js",
+		"server": "nodemon server.js --ignore client",
+		"dev": "concurrently \"npm run client\" \"npm run server\"",
+		"client": "cd client && npm start",
+		"install-client": "cd client && npm install",
+		"build": "cd client && npm run build",
 		"heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
 	},
 	"repository": {
@@ -21,6 +26,7 @@
 	"homepage": "https://github.com/DonataB/Create-a-Note-MERN-app#readme",
 	"devDependencies": {
 		"@types/styled-components": "^5.1.25",
+		"concurrently": "^7.2.2",
 		"nodemon": "^2.0.16"
 	},
 	"dependencies": {
