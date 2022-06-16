@@ -22,12 +22,11 @@ export const Card = styled.div`
 	margin-top: 40px;
 	width: 50%;
 	height: 80%;
-	background-color: ${({ theme }) => theme.colors.card.primaryOpacity};
+	background-color: ${({ theme }) => theme.colors.card.primary};
 	border-radius: ${({ theme }) => theme.size.common.borderRadius};
 	color: ${({ theme }) => theme.colors.common.textColor};
 	font-weight: ${({ theme }) => theme.weight.bold};
 	padding: 15px;
-	/* mix-blend-mode: multiply; */
 
 	@media (max-width: 576px) {
 		width: 95%;
@@ -36,7 +35,7 @@ export const Card = styled.div`
 
 
 export const Title = styled.div`
-	font-size: ${({ theme }) => theme.size.desktop.xxxl};
+	font-size: ${({ theme }) => theme.size.desktop.xl};
 	text-align: center;
 
 	@media (max-width: 576px) {
@@ -46,9 +45,9 @@ export const Title = styled.div`
 
 export const Text = styled.div`
 	margin-top: 1rem;
-	font-size: ${({ theme }) => theme.size.desktop.lg};
+	font-size: ${({ theme }) => theme.size.desktop.sm};
 
 	@media (max-width: 576px) {
-		font-size: ${({ theme }) => theme.size.mobile.mdl};
+		font-size: ${({ theme }) => theme.size.mobile.md};
 	} ;
 `;
