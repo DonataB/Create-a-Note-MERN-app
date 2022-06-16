@@ -30,7 +30,7 @@ export const ErrorMessage = styled.div`
   display: flex;
   width: 100%;
   height: 20vh;
-  font-size: ${({ theme }) => theme.size.desktop.mdl}px;
+  font-size: ${({ theme }) => theme.size.desktop.xs};
   align-items: center;
   justify-content: center;
 `;
