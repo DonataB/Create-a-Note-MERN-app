@@ -22,17 +22,18 @@ export const Card = styled.div`
 	margin-top: 40px;
 	width: 50%;
 	height: 80%;
-	background-color: ${({ theme }) => theme.colors.card.primary};
+	background-color: ${({ theme }) => theme.colors.card.primaryOpacity};
 	border-radius: ${({ theme }) => theme.size.common.borderRadius};
 	color: ${({ theme }) => theme.colors.common.textColor};
 	font-weight: ${({ theme }) => theme.weight.bold};
 	padding: 15px;
-	mix-blend-mode: multiply;
+	/* mix-blend-mode: multiply; */
 
 	@media (max-width: 576px) {
 		width: 95%;
 	} ;
 `;
+
 
 export const Title = styled.div`
 	font-size: ${({ theme }) => theme.size.desktop.xxxl};

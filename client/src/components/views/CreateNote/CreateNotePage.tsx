@@ -101,10 +101,10 @@ const CreateNotePage = () => {
             <ErrorCard>{createNoteFormHandler.errors.content}</ErrorCard>
           ) : null}
 
+        </AddForm>
           <AddNoteButton type="submit" disabled={isInputInvalid()}>
             Add Note
           </AddNoteButton>
-        </AddForm>
       </AddNoteCard>
     </Wrapper>
   );

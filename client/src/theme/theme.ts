@@ -3,7 +3,7 @@ export const theme = {
     common: {
       text: "#FFF",
       textColor: "#242F9B",
-      // textColor: "#000",
+      // textColor: "#8B8B8B",
       textColorSecondary: "#646FD4",
       textInactive: "#A59E9E",
       secondaryTextInactive: "#8B8B8B",
@@ -16,20 +16,22 @@ export const theme = {
     },
     card: {
       primary: "#F8F3EF",
+      primaryOpacity: "#f8f3ef8c",
       secondary: "#F9F8F8",
+      secondaryOpacity: "#f8f3efcc",
       highlighted: "#EEE6E6",
       boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
       offer: "#FFF",
     },
     button: {
-      primary: "#538D22",
-      secondary: "#F9F8F8",
-      textInactive: "#8B8B8B",
-      hover: "#AAD576",
-      secondaryHover: "#A59E9E",
-      transparent: "transparent",
-      addButton: "#F9F8F8",
-      deleteButton: "#f41414",
+      primary: "#2F8F9D",
+      secondary: "#82DBD8",
+      // textInactive: "#8B8B8B",
+      // hover: "#AAD576",
+      // secondaryHover: "#A59E9E",
+      // transparent: "transparent",
+      // addButton: "#F9F8F8",
+      // deleteButton: "#f41414",
     },
     input: {
       primary: "#F9F8F8",
@@ -37,12 +39,7 @@ export const theme = {
       placeholder: "#9E9999",
       transparent: "transparent",
     },
-    table: {
-      primary: "#F5F6F7",
-      secondary: "#AAD576",
-      oddRow: "#F0F0F0	",
-      filterButton: "#DCDCDC",
-    },
+
   },
   size: {
     mobile: {

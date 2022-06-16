@@ -8,17 +8,18 @@ export const Wrapper = styled(NotesWrapper)`
 export const AddNoteCard = styled(NoteCard)`
   width: 600px;
   height: 400px;
-`;
-
-export const AddForm = styled.form`
-  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  justify-content: center;
   align-items: center;
 `;
 
+export const AddForm = styled.form`
+  width: 85%;
+`;
+
 export const AddNoteInput = styled.input`
-  width: 80%;
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   margin: 20px 0;
@@ -34,8 +35,8 @@ export const AddNoteInput = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-  width: 80%;
-  min-height: 15vh;
+  width: 100%;
+  min-height: 18vh;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -52,7 +53,7 @@ export const TextArea = styled.textarea`
 
 export const AddNoteButton = styled.button`
   width: 200px;
-  background-color: ${({ theme }) => theme.colors.navigationBar.primary};
+  background-color: ${({ theme }) => theme.colors.button.primary};
   color: white;
   border: none;
   cursor: pointer;
@@ -61,7 +62,7 @@ export const AddNoteButton = styled.button`
   font-size: 18px;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.navigationBar.secondary};
+    background-color: ${({ theme }) => theme.colors.button.secondary};
   }
 `;
 
