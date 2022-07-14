@@ -8,12 +8,8 @@ export const NavBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  overflow: hidden;
-  background: lightblue;
   background-color: ${({ theme }) => theme.colors.navigationBar.primary};
-  @media (max-width: 1000px) and (max-height: 500px) {
-    height: 85px;
-  }
+
 `;
 
 export const Navilink = styled(NavLink)`
