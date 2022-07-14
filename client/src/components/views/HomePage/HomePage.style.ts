@@ -4,33 +4,23 @@ import LandingPageBackground from "../../../assets/LandingPagePhoto.jpg";
 export const HomePageWrapper = styled.div`
 	background-image: url(${LandingPageBackground});
 	background-size: cover;
-	background-position: 100% 0;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 90vh;
-	@media (max-width: 952px) {
-		background-position: 80% 0;
-	}
-	@media (max-width: 576px) {
-	} ;
+	height: 100vh;
 `;
 
 export const Card = styled.div`
 	margin-top: 40px;
-	width: 50%;
-	height: 80%;
+	max-width: 70vw;
+	max-height: 50vh;
 	background-color: ${({ theme }) => theme.colors.card.primary};
 	border-radius: ${({ theme }) => theme.size.common.borderRadius};
 	color: ${({ theme }) => theme.colors.common.textColor};
 	font-weight: ${({ theme }) => theme.weight.bold};
 	padding: 15px;
-
-	@media (max-width: 576px) {
-		width: 95%;
-	} ;
 `;
 
 

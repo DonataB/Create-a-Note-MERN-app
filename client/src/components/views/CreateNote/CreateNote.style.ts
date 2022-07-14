@@ -1,30 +1,21 @@
 import styled from "styled-components";
-import { NotesWrapper, NoteCard } from "../Notes/Notes.style";
+import { NotesWrapper } from "../Notes/Notes.style";
 
 export const Wrapper = styled(NotesWrapper)`
 	justify-content: center;
-
-	@media (max-width: 920px) {
-		justify-content: flex-start;
-		padding-top: 4rem;
-	}
 `;
 
-export const AddNoteCard = styled(NoteCard)`
-	width: 600px;
-	height: 400px;
+export const AddNoteCard = styled.div`
+	max-width: 90vw;
+	max-height: 80vh;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
-
-	@media (max-width: 920px) {
-		width: 500px;
-	}
-
-	@media (max-width: 520px) {
-		width: 300px;
-	}
+	padding: 15px;
+	background-color: ${({ theme }) => theme.colors.card.secondary};
+	box-shadow: ${({ theme }) => theme.colors.card.boxShadow};
+	border-radius: 5px;
 `;
 
 export const AddForm = styled.form`

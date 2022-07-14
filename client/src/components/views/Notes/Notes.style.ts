@@ -6,7 +6,8 @@ import { HomePageWrapper } from "../HomePage/HomePage.style";
 
 export const NotesWrapper = styled(HomePageWrapper)`
 	background-image: url(${NotePageBackground});
-	justify-content: flex-start;
+	overflow: scroll;
+	/* justify-content: flex-start; */
 `;
 
 export const NoteCard = styled.div`
@@ -28,6 +29,8 @@ export const NoteTitle = styled.div`
 
 export const NoteContent = styled.div`
 	padding: 10px;
+	overflow: auto;
+	flex: auto;
 `;
 
 export const ErrorMessage = styled.div`
@@ -42,9 +45,10 @@ export const ErrorMessage = styled.div`
 export const ButtonArea = styled.div`
 	display: flex;
 	justify-content: space-between;
-	border: 1px solid;
+	/* border: 1px solid; */
 	width: 100%;
-	height: 40px;
+	height: 35px;
+	margin-top: 10px;
 	background-color: ${({ theme }) => theme.colors.card.secondary};
 `;
 
@@ -93,9 +97,9 @@ export const UpdateIco = styled(BinIco)`
 
 export const Info = styled.div`
 	position: absolute;
-  top: 1px;
+	top: 1px;
 	color: black;
-  padding: 1px;
+	padding: 1px;
 	background-color: white;
 	width: 35px;
 	height: 14px;
