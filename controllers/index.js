@@ -29,7 +29,7 @@ export const getNotes = async (req, res) => {
 export const deleteNote = async (req, res) => {
 	try {
 		const { deletedCount } = await deleteNoteWithId(req.params.id);
-		if (!deletedCount) return res.status(404).send("There is no user");
+		if (!deletedCount) return res.status(404).send("There is no note found");
 	} catch (error) {
 		return res.status(500).send(error.message);
 	}

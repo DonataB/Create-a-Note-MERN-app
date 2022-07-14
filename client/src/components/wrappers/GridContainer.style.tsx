@@ -4,13 +4,13 @@ interface GridColumnProps {
   bigScreenColumns?: number;
   mediumScreenColumns?: number;
   smallScreenColumns?: number;
+  mobileScreenColumns?: number;
 }
 
 export const GridContainer = styled.div<GridColumnProps>`
   margin: 30px auto;
   display: grid;
   width: 72vw;
-  /* height: 80vh; */
   grid-template-columns: ${({ bigScreenColumns }) =>
     bigScreenColumns ? `repeat(${bigScreenColumns}, 1fr)` : `repeat(4, 1fr)`};
   grid-template-rows: auto;
@@ -23,10 +23,18 @@ export const GridContainer = styled.div<GridColumnProps>`
         ? `repeat(${mediumScreenColumns}, 1fr)`
         : `repeat(3, 1fr)`};
   }
-  @media (max-width: 576px) {
+  @media (max-width: 820px) {
     grid-template-columns: ${({ smallScreenColumns }) =>
       smallScreenColumns
         ? `repeat(${smallScreenColumns}, 1fr)`
         : `repeat(2, 1fr)`};
+  }
+
+  @media (max-width: 550px) {
+    width: 50vw;
+    grid-template-columns: ${({ mobileScreenColumns }) =>
+      mobileScreenColumns
+        ? `repeat(${mobileScreenColumns}, 1fr)`
+        : `repeat(1, 1fr)`};
   }
 `;
