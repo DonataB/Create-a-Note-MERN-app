@@ -7,7 +7,6 @@ import {
 	Outlet,
 } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
 import GlobalStyles from "./globalStyles/GlobalStyles";
 import NavigationBar from "./components/views/Navbar/Navbar";
 import HomePage from "./components/views/HomePage/HomePage";
@@ -26,7 +25,6 @@ function App() {
 						<Route path="/create" element={<CreateNotePage />} />
 					</Route>
 				</Routes>
-				<ToastContainer />
 			</Router>
 		</ThemeProvider>
 	);
