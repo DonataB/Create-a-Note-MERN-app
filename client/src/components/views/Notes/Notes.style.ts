@@ -2,20 +2,20 @@ import styled from "styled-components";
 import NotePageBackground from "../../../assets/NotesPagePhoto.jpg";
 import Bin from "../../../assets/trash.svg";
 import Update from "../../../assets/update.svg";
-import { HomePageWrapper } from "../HomePage/HomePage.style";
 
-export const NotesWrapper = styled(HomePageWrapper)`
+export const NotesWrapper = styled.div`
 	background-image: url(${NotePageBackground});
-	overflow: scroll;
-	/* justify-content: flex-start; */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: inline-block;
+	width: 100%;
 `;
 
 export const NoteCard = styled.div`
-	display: flex;
-	flex-direction: column;
 	padding: 15px;
 	width: 250px;
-	height: 280px;
+	height: 280px; 
 	background-color: ${({ theme }) => theme.colors.card.secondary};
 	box-shadow: ${({ theme }) => theme.colors.card.boxShadow};
 	border-radius: 5px;
@@ -31,6 +31,7 @@ export const NoteContent = styled.div`
 	padding: 10px;
 	overflow: auto;
 	flex: auto;
+    height: 170px;
 `;
 
 export const ErrorMessage = styled.div`
@@ -45,11 +46,11 @@ export const ErrorMessage = styled.div`
 export const ButtonArea = styled.div`
 	display: flex;
 	justify-content: space-between;
-	/* border: 1px solid; */
 	width: 100%;
 	height: 35px;
 	margin-top: 10px;
 	background-color: ${({ theme }) => theme.colors.card.secondary};
+	
 `;
 
 export const BinIco = styled.button`
@@ -67,33 +68,6 @@ export const BinIco = styled.button`
 export const UpdateIco = styled(BinIco)`
 	background-image: url(${Update});
 `;
-
-// export const UpdateIco = styled.button`
-// 	position: relative;
-// 	background-image: url(${Update});
-// 	background-repeat: no-repeat;
-// 	background-position: center;
-// 	background-color: ${({ theme }) => theme.colors.card.secondary};
-// 	border: none;
-// 	width: 20px;
-// 	padding: 15px;
-// 	cursor: pointer;
-// `;
-
-// export const DeleteBtn = styled.button`
-// position: relative;
-// 	background-image: url(${Bin});
-// 	background-repeat: no-repeat;
-// 	background-position: center;
-// 	width: 20px;
-// 	height: 20px;
-// 	align-self: flex-end;
-// 	border: none;
-// 	padding: 15px;
-// 	background-color: ${({ theme }) => theme.colors.card.secondary};
-
-// 	cursor: pointer;
-// `;
 
 export const Info = styled.div`
 	position: absolute;
