@@ -21,8 +21,8 @@ function App() {
 				<Routes>
 					<Route path='/' element={<PagesWithNavigationBar />}>
 						<Route path='/' element={<HomePage />} />
-						<Route path="/all-notes" element={<NotesPage />} />
 						<Route path="/create" element={<CreateNotePage />} />
+						<Route path="/all-notes" element={<NotesPage />} />
 					</Route>
 				</Routes>
 			</Router>
