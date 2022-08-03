@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { NotesWrapper } from "../Notes/Notes.style";
+import CreateNotePageBackground from "../../../assets/NotesPagePhoto.jpg";
+import { HomePageWrapper } from "../HomePage/HomePage.style";
 
-export const Wrapper = styled(NotesWrapper)`
-	justify-content: center;
+export const Wrapper = styled(HomePageWrapper)`
+	background-image: url(${CreateNotePageBackground});
 `;
 
 export const AddNoteCard = styled.div`
