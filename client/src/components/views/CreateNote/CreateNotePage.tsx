@@ -14,6 +14,7 @@ import {
 	TextArea,
 	BtnArea,
 } from "./CreateNote.style";
+import { Toast } from "../../wrappers/Toast.style";
 
 const CreateNotePage = () => {
 	const createNoteFormHandler = useFormik({
@@ -27,7 +28,7 @@ const CreateNotePage = () => {
     },
 	});
 
-	const onCreateHandler = async (event: React.FormEvent<HTMLFormElement>) => {
+	const onCreateHandler: any = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		createNoteFormHandler.handleSubmit();
 
@@ -46,7 +47,7 @@ const CreateNotePage = () => {
 				return toast.error("Upps! Note wasn't added");
 			});
 	};
-
+	
 	const noFieldsAreTouched = () => {
 		return (
 			!createNoteFormHandler.touched.title &&
@@ -109,6 +110,7 @@ const CreateNotePage = () => {
 						</AddNoteButton>
 					</BtnArea>
 				</AddForm>
+				<Toast />
 			</AddNoteCard>
 		</Wrapper>
 	);
