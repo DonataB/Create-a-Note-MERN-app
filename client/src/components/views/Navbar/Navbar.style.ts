@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const NavBar = styled.div`
   position: fixed;
+  z-index: 1;
   height: 10vh;
   width: 100%;
   display: flex;
