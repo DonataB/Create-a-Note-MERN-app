@@ -43,4 +43,3 @@ mongoose
   })
   .then(() => console.log("Connected into MongoDB.."))
   .catch((err) => console.error(err));
-
