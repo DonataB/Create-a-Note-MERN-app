@@ -9,7 +9,7 @@ interface FetchDataParams {
 }
 
 // export const BASE_URL = "http://localhost:3000";
-export const BASE_URL = "https://create-a-notes.herokuapp.com/";
+export const BASE_URL = "https://create-a-notes.herokuapp.com";
 axios.defaults.method = "GET";
 axios.defaults.baseURL = BASE_URL;
 
@@ -43,14 +43,3 @@ const useFetchData = <T>(params: FetchDataParams) => {
 };
 
 export default useFetchData;
-
-// const instance = axios.create({
-//   baseURL: process.env.PORT || "http://localhost:3000",
-//   headers: {
-//     "Content-type": "application/json",
-//     "Access-Control-Allow-Origin": "*",
-//     "Access-Control-Allow-Methods": "GET, PUT, POST, PATCH, DELETE",
-//   },
-// });
-
-// export default instance;
