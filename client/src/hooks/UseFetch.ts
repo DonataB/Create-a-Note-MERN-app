@@ -8,7 +8,8 @@ interface FetchDataParams {
   body?: Record<string, unknown>;
 }
 
-export const BASE_URL = "http://localhost:3000";
+// export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://create-a-notes.herokuapp.com/";
 axios.defaults.method = "GET";
 axios.defaults.baseURL = BASE_URL;
 
