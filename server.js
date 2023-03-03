@@ -22,6 +22,7 @@ const corsOptions = {
   "Access-Control-Allow-Origin": "*",
 };
 app.use(cors(corsOptions));
+app.use("/notes", noteRoute);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
@@ -43,4 +44,4 @@ app.get("*", (req, res) => {
   .then(() => console.log("Connected into MongoDB.."))
   .catch((err) => console.error(err));
   
-  app.use("/notes", noteRoute);
+  
