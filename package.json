@@ -12,7 +12,7 @@
 		"client": "cd client && npm start",
 		"install-client": "cd client && npm install",
 		"build": "cd client && npm run build",
-		"heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+		"heroku-postbuild": "cd client && npm install && npm install && npm run build"
 	},
 	"repository": {
 		"type": "git",
@@ -41,5 +41,6 @@
 	},
 	"engines": {
 		"node": "16.15.1"
-	}
+	},
+	"proxy": "https://create-a-notes.herokuapp.com/"
 }
