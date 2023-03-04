@@ -4,10 +4,10 @@ import Bin from '../../../assets/trash.svg';
 import Update from '../../../assets/update.svg';
 
 export const NotesWrapper = styled.div`
-	/* position: relative; */
 	background-image: url(${NotePageBackground});
 	background-size: cover;
 	background-position: center;
+	min-height: 100vh;
 `;
 
 export const NoteCard = styled.div`
