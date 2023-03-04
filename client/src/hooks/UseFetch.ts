@@ -31,7 +31,7 @@ const useFetchData = <T>(params: FetchDataParams) => {
     } catch (err: any) {
       setError(err.response.data || "Something goes wrong!");
     } finally {
-      setLoading(false);
+      setLoading(true);
     }
   }, [params]);
 
