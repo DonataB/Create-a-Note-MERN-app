@@ -25,7 +25,7 @@ const NotesPage = () => {
 
 	const displayNotes = () => {
 		if (notes.length === 0) {
-			return <ErrorMessage>0 results found for your search.</ErrorMessage>;
+			return <ErrorMessage>Uuups... nothing has been noted yet or we can't connect to the database now.. Please be patient, we are already working on it :)</ErrorMessage>;
 		} else if (!error) {
 			return <Notes notes={notes} />;
 		} else {
