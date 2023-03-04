@@ -1,21 +1,19 @@
-import styled from "styled-components";
-import NotePageBackground from "../../../assets/NotesPagePhoto.jpg";
-import Bin from "../../../assets/trash.svg";
-import Update from "../../../assets/update.svg";
+import styled from 'styled-components';
+import NotePageBackground from '../../../assets/NotesPagePhoto.jpg';
+import Bin from '../../../assets/trash.svg';
+import Update from '../../../assets/update.svg';
 
 export const NotesWrapper = styled.div`
+	/* position: relative; */
 	background-image: url(${NotePageBackground});
 	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	display: inline-block;
-	width: 100%;
+	background-position: center;
 `;
 
 export const NoteCard = styled.div`
 	padding: 15px;
 	width: 250px;
-	height: 280px; 
+	height: 280px;
 	background-color: ${({ theme }) => theme.colors.card.secondary};
 	box-shadow: ${({ theme }) => theme.colors.card.boxShadow};
 	border-radius: 5px;
@@ -31,7 +29,7 @@ export const NoteContent = styled.div`
 	padding: 10px;
 	overflow: auto;
 	flex: auto;
-    height: 170px;
+	height: 170px;
 `;
 
 export const ErrorMessage = styled.div`
@@ -50,7 +48,6 @@ export const ButtonArea = styled.div`
 	height: 35px;
 	margin-top: 10px;
 	background-color: ${({ theme }) => theme.colors.card.secondary};
-	
 `;
 
 export const BinIco = styled.button`
