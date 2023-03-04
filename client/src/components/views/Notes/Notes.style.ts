@@ -34,11 +34,14 @@ export const NoteContent = styled.div`
 
 export const ErrorMessage = styled.div`
 	display: flex;
-	width: 100%;
-	height: 20vh;
-	font-size: ${({ theme }) => theme.size.desktop.xs};
-	align-items: center;
 	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 20vh;
+	padding: 2rem;
+	color: ${({ theme }) => theme.colors.navigationBar.primary};
+	font-size: ${({ theme }) => theme.size.desktop.xs};
+
 `;
 
 export const ButtonArea = styled.div`
