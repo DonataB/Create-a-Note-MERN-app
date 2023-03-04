@@ -41,9 +41,6 @@ export const Notes: React.FC<INotes> = ({ notes }) => {
 						<NoteTitle>{note.title}</NoteTitle>
 						<NoteContent>{note.content}</NoteContent>
 						<ButtonArea>
-							{/* <UpdateIco>
-								<Info>update</Info>
-							</UpdateIco> */}
 							<BinIco type='submit' onClick={() => handleDeleteNote(note._id)}>
 								<Info>delete</Info>
 							</BinIco>
