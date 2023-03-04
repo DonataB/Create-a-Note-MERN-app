@@ -39,6 +39,7 @@ export const ErrorMessage = styled.div`
 	width: 80%;
 	height: 20vh;
 	padding: 2rem;
+	margin: 0 auto;
 	color: ${({ theme }) => theme.colors.navigationBar.primary};
 	font-size: ${({ theme }) => theme.size.desktop.xs};
 	background-color: ${({ theme }) => theme.colors.card.primary}
