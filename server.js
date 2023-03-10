@@ -16,17 +16,6 @@ if (!process.env.MONGO_CONNECT_URI)
 const app = express();
 app.use(express.json());
 
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static(path.join(__dirname, 'client', 'build')));
-	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-	});
-} else {
-	app.get('/', (req, res) => {
-		res.send('API is running..');
-	});
-}
-
 const corsOptions = {
 	origin: '*',
 	'Access-Control-Allow-Origin': '*',
@@ -34,9 +23,12 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use('/notes', noteRoute);
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-// });
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static(path.join(__dirname, 'client', 'build')));
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	});
+} 
 
 app.listen(process.env.PORT || 3000, () => {
 	console.log(`Server started on port ${process.env.PORT}`);
